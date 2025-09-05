@@ -1,0 +1,400 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+.flexBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background: url('mainBG-Desktop.jpg');
+    background-clip: 100% 100%;
+    background-size: cover;
+}
+
+/* HEADER OR TITLE SECTION  */
+.header {
+    width: 100%;
+    height: 10%;
+    align-items: last baseline;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: .5rem;
+    color: rgba(240, 248, 255, 0.53);
+}
+
+
+/* BELOW HEADER  */
+.body {
+    width: 100%;
+    height: 90%;
+}
+
+/* MAIN CLOCK FRAME  */
+.clocksFrame {
+    width: 45rem;
+    height: 60rem;
+    background: url('clockBG.png');
+    background-size: cover;
+    border-radius: 1rem;
+    flex-direction: column;
+    box-shadow: 0 0 .4rem aliceblue;
+}
+
+/* ANALOG PART  */
+.analog {
+    width: 100%;
+    height: 75%;
+    position: relative;
+}
+
+.frame {
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.307);
+    border-radius: 150%;
+    box-shadow: inset 0 0 .4rem rgba(240, 248, 255, 0.242);
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.minuteHand {
+    width: 95%;
+    height: 95%;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+p {
+    font-size: 2.5rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* ADJUSTING THE ANGLES OF TIME  */
+/* --------------------------------------------------- */
+.timePair2 {
+    transform: rotate(30deg);
+}
+
+.timePair2 p {
+    transform: rotate(-30deg);
+}
+
+.timePair3 {
+    transform: rotate(60deg);
+}
+
+.timePair3 p {
+    transform: rotate(-60deg);
+}
+
+.timePair4 {
+    transform: rotate(90deg);
+}
+
+.timePair4 p {
+    transform: rotate(-90deg);
+}
+
+.timePair5 {
+    transform: rotate(120deg);
+}
+
+.timePair5 p {
+    transform: rotate(-120deg);
+}
+
+.timePair6 {
+    transform: rotate(150deg);
+}
+
+.timePair6 p {
+    transform: rotate(-150deg);
+}
+
+/* --------------------------------------------------- */
+
+
+/* MINUTE HOUR SECOND HANDS  */
+.hands {
+    width: 75%;
+    height: 75%;
+    /* background-color: rgb(169, 208, 243); */
+    border-radius: 150%;
+    position: absolute;
+    z-index: 2;
+}
+
+.hour {
+    width: .5rem;
+    height: 70%;
+    background: linear-gradient(rgb(81, 191, 255) 60%, rgba(240, 248, 255, 0) 40%);
+    position: absolute;
+    z-index: 3;
+}
+
+.min {
+    width: .5rem;
+    height: 80%;
+    background: linear-gradient(rgb(86, 255, 100) 60%, rgba(240, 248, 255, 0) 40%);
+    position: absolute;
+    z-index: 2;
+}
+
+.sec {
+    width: .5rem;
+    height: 90%;
+    background: linear-gradient(rgb(185, 177, 255) 60%, rgba(240, 248, 255, 0) 40%);
+    position: absolute;
+    z-index: 1;
+}
+
+img {
+    width: 80%;
+    animation: sharingan 2s linear infinite;
+}
+
+@keyframes sharingan {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.dot {
+    width: 8%;
+    height: 8%;
+    position: absolute;
+    z-index: 3;
+}
+
+/* DIGITAL PART  */
+.digital {
+    width: 100%;
+    height: 25%;
+}
+
+.time {
+    width: 5rem;
+    height: 6.5rem;
+    box-shadow: 0 0 .2rem aliceblue, inset 0 0 .2rem aliceblue;
+    background: linear-gradient(90deg, rgba(76, 130, 130, 0.447), rgba(134, 71, 122, 0.452));
+    border-radius: 1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 0 1rem;
+    color: rgb(255, 255, 255);
+    margin-bottom: 3rem;
+}
+
+.blinkDot {
+    font-size: 5rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 3.5rem;
+}
+
+/* FOR RESPONSIVE DESIGN  */
+@media (min-width: 300px) and (max-width:400px) {
+
+    .main {
+        background: url('mainBG-Mob.jpg');
+    }
+
+    .header {
+        height: 15%;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .body {
+        height: 85%;
+    }
+
+    .clocksFrame {
+        width: 30rem;
+        height: 40rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .hour {
+        width: .3rem;
+    }
+
+    .min {
+        width: .3rem;
+    }
+
+    .sec {
+        width: .3rem;
+    }
+
+    .time {
+        width: 3.5rem;
+        height: 5rem;
+        font-size: 1.3rem;
+        margin: 0 .4rem;
+        margin-bottom: 1.7rem;
+    }
+
+    .blinkDot {
+        font-size: 3rem;
+        color: rgb(0, 0, 0);
+        margin-bottom: 1.9rem;
+    }
+}
+
+
+@media (min-width: 400px) and (max-width:500px) {
+
+    .main {
+        background: url('mainBG-Mob.jpg');
+    }
+
+    .header {
+        height: 15%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .body {
+        height: 85%;
+    }
+
+    .clocksFrame {
+        width: 35rem;
+        height: 50rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .hour {
+        width: .3rem;
+    }
+
+    .min {
+        width: .3rem;
+    }
+
+    .sec {
+        width: .3rem;
+    }
+
+    .time {
+        width: 3.5rem;
+        height: 5rem;
+        font-size: 1.3rem;
+        margin: 0 .4rem;
+        margin-bottom: 1.7rem;
+    }
+
+    .blinkDot {
+        font-size: 3rem;
+        color: rgb(0, 0, 0);
+        margin-bottom: 1.9rem;
+    }
+}
+
+@media (min-width: 500px) and (max-width:650px) {
+    .main {
+        background: url('mainBG-Mob.jpg');
+    }
+
+    .header {
+        height: 15%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .body {
+        height: 85%;
+    }
+
+    .clocksFrame {
+        width: 40rem;
+        height: 55rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .hour {
+        width: .3rem;
+    }
+
+    .min {
+        width: .3rem;
+    }
+
+    .sec {
+        width: .3rem;
+    }
+}
+
+@media (min-width: 651px) and (max-width:800px) {
+    .main {
+        background: url('mainBG-Tab.jpg');
+    }
+
+    .header {
+        height: 15%;
+    }
+
+    h1 {
+        font-size: 2.1rem;
+    }
+
+    .body {
+        height: 85%;
+    }
+
+    .clocksFrame {
+        width: 45rem;
+        height: 60rem;
+    }
+
+    p {
+        font-size: 1.5rem;
+    }
+
+    .hour {
+        width: .3rem;
+    }
+
+    .min {
+        width: .3rem;
+    }
+
+    .sec {
+        width: .3rem;
+    }
+}
